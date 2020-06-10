@@ -1,6 +1,6 @@
 @include "base.fgd"
 
-@PointClass = surf_configuration : "This is the checkpoint brush which registers when players hit it."
+@PointClass = surf_configuration : "Tells the gamemode to disable normal setup procedures and to rely on the maps' placement of entities instead."
 [
 	author(string) : "Author" : "GabeN" : "Your name goes here! Or whoever is publishing the map"
 	steamid64(string) : "Steam ID (64 bit)" : "76561197960287930" : "Your SteamID 64. Can be used for proof, to give rewards, whatever!"
@@ -9,7 +9,7 @@
 @SolidClass = surf_startlinezone : "The starting line which triggers things such as recording times."
 []
 
-@SolidClass = surf_stagezone : "Trigger that when a player touches it, marks the stage as 'complete'."
+@SolidClass = surf_stagezone : "Trigger that when a player touches it, marks the stage as 'complete'. Also considered to be a checkpoint."
 [
 	stageid(integer) : "Stage Number" : 1 : "Stage Number"
 	spawnpos(vector): "Player Spawn Position" : "0 0 0" : "Where the player spawns when teleporting to this stage."
