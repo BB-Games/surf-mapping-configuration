@@ -1,0 +1,41 @@
+@include "base.fgd"
+
+@PointClass = surf_configuration : "This is the checkpoint brush which registers when players hit it."
+[
+	author(string) : "Author" : "GabeN" : "Your name goes here! Or whoever is publishing the map"
+	steamid64(string) : "Steam ID (64 bit)" : "76561197960287930" : "Your SteamID 64. Can be used for proof, to give rewards, whatever!"
+]
+
+@SolidClass = surf_startlinezone : "The starting line which triggers things such as recording times."
+[]
+
+@SolidClass = surf_stagezone : "Trigger that when a player touches it, marks the stage as 'complete'."
+[
+	stageid(integer) : "Stage Number" : 1 : "Stage Number"
+	spawnpos(vector): "Player Spawn Position" : "0 0 0" : "Where the player spawns when teleporting to this stage."
+]
+
+@SolidClass = surf_splitzone : "Trigger that allows a players time to be captured at a given point in a run."
+[
+	splitid(integer) : "Split ID" : 1 : "Which split this trigger represents."
+	type(choices) : "Split Type" : "start" : "Split zone type" =
+	[
+		"start" : "Start"
+		"end" : "End"
+		"both" : "Both"
+	]
+]
+
+@SolidClass = surf_hopzone : "Trigger that places an creates auto-hop zone."
+[
+	iconpos(vector) : "Icon Position" : "0 0 0" : "Position of the icon. Note: Icon will always position itself on the z-axis relative to the overall zone."
+]
+
+@SolidClass = surf_completedonlyzone : "Trigger that only allows users who have completed the map to pass through."
+[
+	msg(string) : "Message" : "You need to beat the map first!" : "Optional message to pass to the player if they haven't beaten the map."
+	telepos(vector): "Teleport Position" : "0 0 0" : "Where we should send the player if they haven't beaten the map and fail this check."
+]
+
+@SolidClass = surf_stoptimezone : "Trigger that allows a player to pass through it, but would stop their timed run."
+[]
