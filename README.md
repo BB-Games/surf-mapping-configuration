@@ -7,4 +7,6 @@ The purpose behind this collection is to add a baseline set of entities that all
 - A ready-to-go fgd that enables mappers to immediately have a full list of all entities that should be available to them.
 - A small collection of vmfs that show how these entities can be used.
 
+## Reference
+Information and the hows and whys of how things work can be found in the [wiki](https://github.com/BB-Games/surf-mapping-configuration/wiki)
 
